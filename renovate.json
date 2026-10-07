@@ -9,7 +9,7 @@
   "semanticCommitType": "chore",
   "semanticCommitScope": "deps",
   "commitMessageTopic": "{{groupSlug}}",
-  "commitMessageExtra": "to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{newVersionMajor}}{{else}}{{{newValue}}}{{/if}}{{/if}}",
+  "commitMessageExtra": "to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{newMajor}}{{else}}{{{newValue}}}{{/if}}{{/if}}",
   "packageRules": [
     {
       "description": "Group Home Assistant Core & Testing tools",
