@@ -1,0 +1,9 @@
+{
+  "terminal.integrated.profiles.osx": {
+    "Host Shell": {
+      "path": "ssh",
+      "args": ["host.docker.internal"],
+      "icon": "desktop-download"
+    }
+  }
+}
