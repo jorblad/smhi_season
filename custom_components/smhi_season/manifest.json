@@ -1,9 +1,9 @@
 {
   "domain": "smhi_season",
   "name": "SMHI Meteorological Season",
+  "after_dependencies": ["recorder"],
   "codeowners": ["@jorblad"],
   "config_flow": true,
-  "after_dependencies": ["recorder"],
   "documentation": "https://github.com/jorblad/smhi_season",
   "iot_class": "local_polling",
   "issue_tracker": "https://github.com/jorblad/smhi_season/issues",
