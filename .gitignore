@@ -1,0 +1,50 @@
+# Home Assistant local dev instance config state
+config/
+!config/custom_components/
+
+# Local Python Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache & bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.nox/
+.tox/
+
+# IDE & Editor files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+*.swp
+*~
+
+# macOS / System garbage
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Build & packaging artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Environment / Secret variables
+.env
