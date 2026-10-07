@@ -1,0 +1,7 @@
+recompute:
+  name: Recompute season
+  description: >-
+    Recompute the meteorological season from recorded temperature history.
+    Call this after backfilling or correcting temperature data so the sensor
+    reflects it immediately without waiting for the next daily update.
+  fields: {}

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:best-practices",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":ignoreUnstable"
+  ],
+  "semanticCommits": "enabled",
+  "semanticCommitType": "chore",
+  "semanticCommitScope": "deps",
+  "commitMessageTopic": "{{groupSlug}}",
+  "commitMessageExtra": "to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{newVersionMajor}}{{else}}{{{newValue}}}{{/if}}{{/if}}",
+  "packageRules": [
+    {
+      "description": "Group Home Assistant Core & Testing tools",
+      "matchPackageNames": [
+        "homeassistant",
+        "pytest-homeassistant-custom-component"
+      ],
+      "groupName": "homeassistant",
+      "semanticCommitScope": "deps(homeassistant)"
+    },
+    {
+      "description": "Group Python Linting & Formatting tools",
+      "matchPackageNames": ["ruff", "pre-commit", "black", "flake8", "isort"],
+      "groupName": "linters",
+      "semanticCommitScope": "deps(linters)"
+    },
+    {
+      "description": "Group Pytest & Testing utilities",
+      "matchPackageNames": [
+        "pytest",
+        "pytest-asyncio",
+        "pytest-cov",
+        "coverage"
+      ],
+      "groupName": "testing",
+      "semanticCommitScope": "deps(testing)"
+    },
+    {
+      "description": "Group GitHub Actions",
+      "matchManagers": ["github-actions"],
+      "groupName": "github-actions",
+      "semanticCommitScope": "deps(github-actions)"
+    }
+  ]
+}

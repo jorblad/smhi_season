@@ -1,0 +1,32 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "SMHI Meteorologisk Årstid",
+        "description": "Välj utomhustemperatursensor som ska användas för att beräkna den meteorologiska årstiden enligt SMHI:s regler.",
+        "data": {
+          "temperature_sensor": "Givare för utomhustemperatur"
+        }
+      }
+    },
+    "error": {
+      "invalid_sensor": "Den valda entiteten är inte en giltig temperatursensor."
+    },
+    "abort": {
+      "already_configured": "SMHI Meteorologisk Årstid är redan konfigurerad för denna sensor."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "meteorological_season": {
+        "name": "Meteorologisk årstid",
+        "state": {
+          "vinter": "Vinter",
+          "var": "Vår",
+          "sommar": "Sommar",
+          "host": "Höst"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+set -e
+
+echo "Installing dev dependencies..."
+pip install --upgrade pip
+pip install homeassistant pytest-homeassistant-custom-component ruff pre-commit
+
+echo "Setting up local Home Assistant config..."
+mkdir -p config/custom_components
+
+# Create a symlink from custom_components into the config workspace
+if [ ! -d "config/custom_components/smhi_season" ]; then
+  ln -s "$(pwd)/custom_components/smhi_season" "$(pwd)/config/custom_components/smhi_season"
+fi
+
+echo "Installing pre-commit hooks..."
+pre-commit install || true

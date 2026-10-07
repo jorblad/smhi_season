@@ -1,0 +1,32 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "SMHI Meteorological Season",
+        "description": "Select the outdoor temperature sensor to use for calculating the current meteorological season according to SMHI rules.",
+        "data": {
+          "temperature_sensor": "Outdoor Temperature Sensor"
+        }
+      }
+    },
+    "error": {
+      "invalid_sensor": "The selected entity is not a valid temperature sensor."
+    },
+    "abort": {
+      "already_configured": "SMHI Meteorological Season is already configured for this sensor."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "meteorological_season": {
+        "name": "Meteorological Season",
+        "state": {
+          "vinter": "Winter",
+          "var": "Spring",
+          "sommar": "Summer",
+          "host": "Autumn"
+        }
+      }
+    }
+  }
+}
