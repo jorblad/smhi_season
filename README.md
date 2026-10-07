@@ -1,5 +1,7 @@
 # SMHI Meteorological Season
 
+Found [doridgren/smhi_season](https://github.com/droidgren/smhi_season) right after creating this so I will archive this.
+
 A [Home Assistant](https://www.home-assistant.io/) integration that calculates
 the current **meteorological season** (according to
 [SMHI](https://www.smhi.se/)) from an outdoor temperature sensor you already
